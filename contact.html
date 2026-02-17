@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realize Morocco - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive-fixes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="logo-header">
+        <div class="container1">
+            <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="header-logo">
+        </div>
+    </header>
+<header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-container-pure-css">
+                <!-- Hidden Checkbox -->
+                <input type="checkbox" id="searchToggle" class="search-checkbox" hidden>
+
+                <!-- Label acts as the search icon button -->
+                <label for="searchToggle" class="search-toggle-label" aria-label="Toggle Search">
+                    <i class="fas fa-search"></i>
+                </label>
+
+                <!-- The search input field -->
+                <div class="search-input-wrapper-pure-css">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button type="submit" class="search-submit-btn" aria-label="Submit Search"><i class="fas fa-arrow-right"></i></button>
+                    <!-- Label acts as the close button -->
+                    <label for="searchToggle" class="search-close-label" aria-label="Close Search"><i class="fas fa-times"></i></label>
+                </div>
+            </div>
+        </div>
+</header>
+
+    <main>
+        <section id="contact-form">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
+                <form action="#" method="POST"> <!-- Action should point to a backend script for actual form submission -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+<footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-section footer-about">
+                <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="footer-logo">
+                <p>
+                    Your trusted partner for seamless relocation and investment in the beautiful country of Morocco. Making your dream a reality.
+                </p>
+                <div class="footer-social-links">
+                    <a href="https://www.facebook.com/share/1DVYz2xB2U/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/realize-morocco-21baa53a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/realizemorocco?igsh=MndtdXhkaHVwNWoy&utm_source=qr" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <nav class="footer-section footer-links" aria-label="Footer Navigation">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-section footer-contact">
+                <h3 class="footer-heading">Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i>Realize Morocco | P.O. Box 86, Azla – Tétouan, Morocco</p>
+                    <p><i class="fas fa-envelope"></i> <a href="realizemorocco@gmail.com">realizemorocco@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+212 666 016 771">+ 212 524 123 456</a></p>
+                </address>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Realize Morocco. All rights reserved.</p>
+            <p class="footer-legal-links">
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+    <!-- END OF PERFECTED FOOTER -->
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="mobile-menu.js"></script>
+</body>
+</html>

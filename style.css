@@ -1,0 +1,1111 @@
+:root {
+    /* Exact colors from your logo */
+    --primary-color: #162336; /* Dark Blue from logo */
+    --secondary-color: #bd9b6a; /* Gold from logo */
+    --text-color: #f1e2d8; /* Off-white/Beige, good contrast for dark backgrounds */
+    --light-bg: #2a3a4a; /* Slightly lighter blue for sections, derived from primary */
+    --dark-text: #333; /* For elements that might be on a lighter background */
+    --hover-gold: #b38e5d; /* Slightly darker gold for hover effects */
+
+    /* Footer Customizations */
+    --footer-bg-color: #162336; /* Dark background */
+    --footer-text-color: #e0e0e0; /* Light grey text */
+    --footer-primary-color: #bd9b6a; /* Gold accent color */
+    --footer-link-hover-color: #ffd700; /* Brighter gold on hover */
+    --footer-border-color: rgba(255, 255, 255, 0.1); /* Subtle separator */
+    --footer-padding-y: 40px; /* Vertical padding for the footer sections */
+    --footer-padding-x: 20px; /* Horizontal padding for the footer sections */
+    --footer-gap: 30px; /* Space between footer sections */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.container p {
+    text-align: left; /* Ensure paragraphs within containers are left-aligned */
+}
+
+section {
+    padding: 50px 0;
+    margin-bottom: 25px;
+    text-align: center;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+section h1,
+section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+
+.logo-header {
+    height: 120px;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.logo-header .container1 img {
+    height: 170px;
+    width: 300px;
+}
+
+.header-logo {
+    max-width: 150px; 
+    height: auto;
+}
+
+.lead.text-text-color { 
+    text-align: center;
+}
+
+
+
+.btn {
+    display: inline-block;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out, transform 0.1s ease-out; /* Added transform for press effect */
+    margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative; /* Needed for potential pseudo-element effects */
+    overflow: hidden; /* To clip any overflow from effects */
+    z-index: 1; /* Ensure button is above other elements for effects */
+}
+
+.btn:hover {
+    background: var(--hover-gold);
+    transform: translateY(-3px) scale(1.02); /* Lift and slightly scale */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98); /* Press down effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Smaller shadow when pressed */
+}
+
+.btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(189, 155, 106, 0.5); /* Gold glow for accessibility */
+}
+
+.secondary-btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-3px) scale(1.02); /* Lift and slightly scale */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+.secondary-btn:active {
+    transform: translateY(0) scale(0.98); /* Press down effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Smaller shadow when pressed */
+}
+
+.secondary-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(189, 155, 106, 0.5); /* Gold glow for accessibility */
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*  HEADER & NAVIGATION (Main site header)                                                                              */
+/*----------------------------------------------------------------------------------------------------------------------*/
+header {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 1px 0; /* Reduced vertical padding */
+    border-bottom: var(--secondary-color) 3px solid;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px; /* Adjust as needed for logo and nav */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Override section .container padding for header */
+}
+
+header nav {
+    width: 100%; /* Ensure nav takes full width to center its ul */
+    display: flex;
+    justify-content: center; /* Center the nav component itself */
+    align-items: center;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+header nav ul li {
+    padding: 0 20px; /* Spacing between nav items */
+    position: relative;
+}
+
+header nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px; /* Slightly reduced font size for menu items */
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-out;
+    display: block;
+    padding: 2px 0; /* Further minimized padding for the actual links */
+}
+
+/* Navigation Underline Effect */
+header nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    left: 50%;
+    bottom: -5px; /* Adjusted position below the text */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::before {
+    width: 100%;
+}
+
+/* Active Link Effect */
+header nav a.active {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+header nav a.active::before {
+    width: 100%; /* Keep underline active for active link */
+}
+
+/* Hover Grow Effect for Text */
+header nav a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Search Container Styles */
+.search-container-pure-css {
+    position: relative; /* Essential for absolute positioning of input wrapper */
+    margin-left: auto; /* Pushes the search container to the far right */
+    display: flex; /* Aligns its content (toggle label) */
+    align-items: center;
+    padding-left: 15px; /* Spacing from nav */
+}
+
+/* The search icon label (our toggle button) */
+.search-toggle-label {
+    color: var(--text-color);
+    font-size: 20px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-out;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2; /* Ensure it's clickable above the input wrapper */
+}
+
+.search-toggle-label:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* The search input field wrapper - initially hidden */
+.search-input-wrapper-pure-css {
+    position: absolute;
+    right: 0; /* Aligns to the right of .search-container-pure-css */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+    /* Initial hidden state */
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    pointer-events: none; /* Prevents interaction when hidden */
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1; /* Below the toggle label initially */
+}
+
+/* When the checkbox is checked, show the input wrapper */
+.search-checkbox:checked + .search-toggle-label + .search-input-wrapper-pure-css {
+    opacity: 1;
+    visibility: visible;
+    width: 250px; /* Expand to desired width */
+    pointer-events: all; /* Allow interaction when visible */
+    z-index: 100; /* Bring to front when active */
+}
+
+/* Styles for elements inside the input wrapper */
+.search-input {
+    border: none;
+    background: none;
+    color: var(--text-color);
+    padding: 8px 10px;
+    font-size: 16px;
+    flex-grow: 1;
+    outline: none;
+    width: 100%; /* Important for text input inside flex */
+}
+
+.search-input::placeholder {
+    color: rgba(241, 226, 216, 0.7);
+}
+
+.search-submit-btn,
+.search-close-label { /* .search-close-label acts as a button */
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s ease-in-out;
+    display: flex; /* For centering icon inside label/button */
+    align-items: center;
+    justify-content: center;
+}
+
+.search-submit-btn:hover,
+.search-close-label:hover {
+    color: var(--hover-gold);
+}
+
+.search-close-label {
+    color: var(--text-color); /* Slightly different color for close icon */
+    font-size: 18px; /* Slightly larger for visibility */
+}
+
+
+/* =========================================
+   PREMIUM HERO SECTION
+   ========================================= */
+body{
+    background: linear-gradient(145deg, var(--light-bg) 0%, var(--primary-color) 100%);
+}
+main {
+    background: linear-gradient(145deg, var(--light-bg) 0%, var(--primary-color) 100%);
+}
+#hero {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Takes up 90% of the screen height */
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(145deg, var(--light-bg) 0%, var(--primary-color) 100%); /* Fallback color */
+}
+
+/* 1. CAROUSEL & KEN BURNS EFFECT */
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* The Zoom Animation */
+    animation: kenBurnsFade 18s infinite; 
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Timing for 3 Slides */
+.carousel-slide.slide1 { animation-delay: 0s; }
+.carousel-slide.slide2 { animation-delay: 6s; }
+.carousel-slide.slide3 { animation-delay: 12s; }
+
+/* The Animation: Fades in AND Zooms slightly */
+@keyframes kenBurnsFade {
+    0% { opacity: 0; transform: scale(1); }
+    5% { opacity: 1; }
+    33% { opacity: 1; }
+    38% { opacity: 0; transform: scale(1.15); } /* Zoom to 1.15x */
+    100% { opacity: 0; transform: scale(1.15); }
+}
+
+/* 2. MODERN GRADIENT OVERLAY */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Darker at bottom to make text pop, clearer at top */
+    background: linear-gradient(
+        to bottom,
+        rgba(22, 35, 54, 0.3) 0%,
+        rgba(22, 35, 54, 0.6) 50%,
+        rgba(22, 35, 54, 0.9) 100%
+    );
+}
+
+/* 3. HERO CONTENT STYLING */
+.hero-content-container {
+    position: relative;
+    z-index: 2; /* Sits above overlay */
+    text-align: center;
+    max-width: 900px;
+}
+
+/* Eyebrow Text (Small Gold Text) */
+.hero-eyebrow {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* Main Title */
+.hero-title {
+    color: #fff;
+    font-size: 4rem; /* Big and Bold */
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeUp 1s ease-out 0.3s forwards; /* Slight delay */
+    opacity: 0; /* Hidden initially */
+}
+
+/* Divider Line */
+.hero-divider {
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 30px auto;
+    border-radius: 2px;
+    animation: scaleWidth 1s ease-out 0.6s forwards;
+    width: 0; /* Starts at 0 width */
+}
+
+/* Subtitle */
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 300;
+    animation: fadeUp 1s ease-out 0.8s forwards;
+    opacity: 0;
+}
+
+/* 4. BUTTONS */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeUp 1s ease-out 1s forwards;
+    opacity: 0;
+}
+
+/* Solid Gold Button */
+.btn-gold {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-gold:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Outline Button */
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* 5. SCROLL INDICATOR (Mouse Animation) */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/* ANIMATIONS KEYFRAMES */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleWidth {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
+}
+
+/* ------------------------------------------------------- */
+/*  IMPROVED ABOUT SECTION STYLES                          */
+/* ------------------------------------------------------- */
+
+.about-section {
+    /* Use your light-bg variable, but we add a subtle gradient for elegance */
+    background-color: #162336;
+    background: linear-gradient(145deg, var(--light-bg) 0%, var(--primary-color) 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: visible; /* Allows the gold frame to poke out if needed */
+}
+
+/* Fix for the flexbox layout if you aren't using Bootstrap grid strictly */
+.about-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.about-section .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+    .about-section .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about-section .row {
+        flex-direction: column-reverse; /* Puts text above image on mobile if desired, or remove to keep image top */
+    }
+    .about-image-wrapper {
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*  CARDS (for services preview, etc.)                                                                                  */
+/*----------------------------------------------------------------------------------------------------------------------*/
+.service-cards,
+.service-detail-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: var(--primary-color);
+    border-color: #bd9b6a;
+    color: var(--text-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid var(--light-bg);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    font-size: 1.6em;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Styles for the cards themselves, providing a consistent layout */
+.why-choose-us .card {
+    background-color: #162336; /* White background for cards */
+    border-radius: 8px;
+    border-color: #bd9b6a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+/* Styling for the icons within the cards */
+.why-choose-us .card i.fas {
+    color: #bd9b6a; /* Set the icon color to GOLD! */
+    font-size: 3.5rem; /* Make icons a bit larger for emphasis */
+    margin-bottom: 1px; /* More space below the icon */
+}
+
+.why-choose-us .card h4 {
+    margin-top: 8px;
+    margin-bottom: 1px; /* More space below the icon */
+}
+
+
+/* General Layout */
+.faq-item {
+    border-bottom: 1px solid #3a4b66; /* The divider line */
+    overflow: hidden;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid #3a4b66;
+}
+
+/* The clickable header area */
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* The Left side (Icon + Text) */
+.faq-title-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.faq-icon {
+    color: #bd9b6a; /* Gold Compass */
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.faq-header span {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* The Plus sign */
+.faq-toggle {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+/* The Hidden Answer */
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: #cccccc;
+    padding-left: 45px; /* Align with text */
+    line-height: 1.6;
+}
+
+.faq-body p {
+    margin-bottom: 25px;
+}
+
+/* Active State (When opened) */
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg); /* Turns + into x */
+    color: #bd9b6a;
+}
+
+.faq-item.active .faq-body {
+    max-height: 200px; /* Adjust if you have very long answers */
+}
+
+/* The CTA Button */
+.btn-consultation {
+    display: inline-block;
+    padding: 12px 30px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #bd9b6a; /* Gold Border */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-consultation:hover {
+    background-color: #bd9b6a;
+    color: #05152e;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*  CONTACT FORM                                                                                                        */
+/*----------------------------------------------------------------------------------------------------------------------*/
+#contact-form form {
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    padding: 35px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--light-bg);
+    border-radius: 6px;
+    background-color: #384858; /* A darker shade for input fields */
+    color: var(--text-color);
+    box-sizing: border-box; /* Include padding in element's total width/height */
+    font-size: 1em;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.contact-info {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contact-info p {
+    margin: 12px 0;
+    font-size: 1.2em;
+}
+
+/* Base Footer Styles */
+.site-footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    font-family: 'Arial', sans-serif; /* Or your preferred font */
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Container for main footer sections */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+/* Footer Section Styling */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* --- KEY CHANGE HERE --- */
+/* Pull the footer-about section even higher */
+.footer-about {
+    margin-top: -25px; /* Increased negative margin to pull it higher */
+    /* Adjust this value as needed for desired offset */
+}
+
+/* Logo Styling */
+.footer-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    filter: brightness(1.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Headings in Footer */
+.footer-heading {
+    color: var(--footer-primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Paragraphs in Footer */
+.footer-about p,
+.footer-contact p {
+    margin-bottom: 8px;
+    align-items: center;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Links in Footer (General) */
+.site-footer a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.site-footer a:hover {
+    color: var(--footer-link-hover-color);
+    text-decoration: underline;
+}
+
+/* List Styling for Navigation Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.footer-links ul li {
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+/* Add margin-top to Quick Links and Contact Info sections to lower them */
+.footer-links,
+.footer-contact {
+    margin-top: 15px; /* Keep this value as set previously */
+}
+
+
+/* Contact Info Icons and Links */
+.footer-contact p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+}
+.footer-contact p i {
+    color: var(--footer-primary-color);
+    margin-right: 8px;
+    font-size: 0.95rem;
+    width: 18px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.footer-contact address {
+    font-style: normal;
+}
+
+/* Social Links */
+.footer-social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.footer-social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 0.25px solid var(--footer-primary-color);
+    border-radius: 50%;
+    color: var(--footer-primary-color);
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer-social-links a:hover {
+    background-color: var(--footer-primary-color);
+    color: var(--footer-bg-color);
+    text-decoration: none;
+}
+
+/* Footer Bottom Section (Copyright and Legal) */
+.footer-bottom {
+    border-top: 0.25px solid var(--footer-border-color);
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 25px;
+    font-size: 0.8rem;
+}
+
+.footer-bottom p {
+    margin-bottom: 6px;
+}
+
+.footer-legal-links a {
+    margin: 0 6px;
+}
+
+.footer-legal-links span {
+    color: var(--footer-text-color);
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*  RESPONSIVE STYLES                                                                                                   */
+/*----------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    /* Header & Navigation - Keeping your existing styles */
+    .nav-search-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-container-pure-css {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-input-wrapper-pure-css {
+        position: static;
+        width: 100%;
+        transform: none;
+    }
+
+    .search-checkbox:checked + .search-toggle-label + .search-input-wrapper-pure-css {
+        width: 100%;
+    }
+
+    /* Cards */
+    .why-choose-us .card {
+        margin-bottom: 0;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-section {
+        min-width: unset;
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 10px;
+    }
+
+    /* Remove margin-top for stacked sections on mobile */
+    .footer-about {
+        margin-top: 0;
+    }
+    .footer-links,
+    .footer-contact {
+        margin-top: 0;
+    }
+
+
+    .footer-heading {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 10px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 4px;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Footer */
+    .site-footer {
+        padding-top: 25px;
+    }
+
+    .footer-heading {
+        font-size: 1rem;
+    }
+
+    .footer-logo {
+        max-width: 130px;
+        margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+        padding-top: 10px;
+        margin-top: 20px;
+        font-size: 0.75rem;
+    }
+
+    .footer-legal-links a {
+        display: block;
+        margin: 4px 0;
+    }
+
+    .footer-legal-links span {
+        display: none;
+    }
+}
+#contact-form .container p {
+    text-align: center;
+}
