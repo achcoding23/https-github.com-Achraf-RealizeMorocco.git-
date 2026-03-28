@@ -364,44 +364,40 @@
     font-weight: 700;
 }
 
-/* Image Frame Effect */
-.story-image {
-    position: relative;
-}
-
+/* Modern Minimalist Frame */
 .image-frame {
     position: relative;
-    z-index: 2;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    padding: 15px;
+    background: var(--c-gold);
+    transition: all 0.4s ease;
+}
+
+/* The floating gold line */
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: -8px; left: -8px; right: -8px; bottom: -8px;
+    border: 1px var(--c-gold);
+    border-style: double;
+    opacity: 0.4;
+    z-index: -1;
+    transition: all 0.4s ease;
 }
 
 .image-frame img {
     width: 100%;
-    height: auto;
     display: block;
-    /* Optional: Sepia tone for style */
-    filter: sepia(20%) contrast(1.1); 
-    transition: filter 0.5s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* The Gold Border behind the image */
-.image-frame::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    border: 1px solid var(--c-gold);
-    transform: translate(15px, 15px); /* Offset */
-    z-index: -1;
-    transition: transform 0.4s ease;
+.story-image:hover .image-frame {
+    border-color: var(--c-gold);
+    transform: translateY(-5px);
 }
 
 .story-image:hover .image-frame::before {
-    transform: translate(8px, 8px); /* Moves closer on hover */
-}
-.story-image:hover img {
-    filter: sepia(0%) contrast(1.0);
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    opacity: 1;
 }
 
 /* =========================================
