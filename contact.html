@@ -10,76 +10,115 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="logo-header">
-        <div class="container1">
-            <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="header-logo">
+<header class="main-header">
+    <div class="header-flex">
+        <!-- 1. Hamburger Menu (Order 1 on Mobile) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" hidden>
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- 2. Logo (Center on Mobile) -->
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="header-logo">
+            </a>
         </div>
-    </header>
-<header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="search-container-pure-css">
-                <!-- Hidden Checkbox -->
-                <input type="checkbox" id="searchToggle" class="search-checkbox" hidden>
 
-                <!-- Label acts as the search icon button -->
-                <label for="searchToggle" class="search-toggle-label" aria-label="Toggle Search">
-                    <i class="fas fa-search"></i>
-                </label>
-
-                <!-- The search input field -->
-                <div class="search-input-wrapper-pure-css">
-                    <input type="text" placeholder="Search..." class="search-input">
-                    <button type="submit" class="search-submit-btn" aria-label="Submit Search"><i class="fas fa-arrow-right"></i></button>
-                    <!-- Label acts as the close button -->
-                    <label for="searchToggle" class="search-close-label" aria-label="Close Search"><i class="fas fa-times"></i></label>
+        <!-- 3. Navigation (Vertical on Mobile) -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+ <section id="contact-section">
+    <div class="container contact-grid">
+        
+        <!-- Left Side: Contact Information & Context -->
+        <div class="contact-info-panel">
+            <span class="eyebrow">Connect With Us</span>
+            <h2 class="main-title">Let’s Start Your Moroccan Story</h2>
+            <div class="gold-divider"></div>
+            <p>Moving to a new country is a big step. Whether you have a specific question about residency or just want to say hello, we’re here to listen and lead the way.</p>
+            
+            <div class="contact-methods">
+                <div class="method-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>realizemorocco@gmail.com</p>
+                    </div>
+                </div>
+                <div class="method-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Based In</h4>
+                        <p>Tetouan, Morocco</p>
+                    </div>
                 </div>
             </div>
         </div>
-</header>
 
-<main>
-    <section id="contact-form">
-        <div class="container">
-            <h1>Get in Touch</h1>
-            <p>We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
-            
-            <!-- Updated action to use FormSubmit with your email -->
+        <!-- Right Side: The Form -->
+        <div class="form-container-premium">
             <form action="https://formsubmit.co/realizemorocco@gmail.com" method="POST">
                 
-                <!-- Optional: HoneyPot to prevent spam (hidden from users) -->
-                <input type="text" name="_captcha" value="false" style="display:none">
-                
-                <!-- Optional: Success Page Redirect (e.g., your homepage) -->
-                <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html"> -->
+                <!-- SECURITY & CONFIGURATION (FormSubmit.co) -->
+                <input type="hidden" name="_captcha" value="true"> <!-- Human check -->
+                <input type="hidden" name="_template" value="table"> <!-- Professional email layout -->
+                <input type="hidden" name="_subject" value="New Relocation Inquiry - Realize Morocco">
+                <input type="text" name="_honey" style="display:none"> <!-- Spam Trap -->
 
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                <div class="form-row">
+                    <div class="form-group-premium">
+                        <label for="name">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="far fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group-premium">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+
+                <div class="form-group-premium">
+                    <label for="subject">How can we help?</label>
+                    <div class="input-wrapper">
+                        <i class="far fa-bookmark"></i>
+                        <input type="text" id="subject" name="subject" placeholder="Residency, Housing, Schooling...">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
+
+                <div class="form-group-premium">
+                    <label for="message">Your Message</label>
+                    <div class="input-wrapper textarea-wrapper">
+                        <i class="far fa-comment-dots"></i>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your plans..." required></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
+
+                <button type="submit" class="btn btn-submit">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
             </form>
         </div>
-    </section>
+
+    </div>
+</section>
 </main>
 
 <footer class="site-footer">

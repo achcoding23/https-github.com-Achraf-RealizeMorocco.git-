@@ -6,45 +6,38 @@
     <title>Realize Morocco - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
-    <link rel="canonical" href="https://realizemorocco.com/" />x
+    <link rel="canonical" href="https://realizemorocco.com/" />
     <link rel="stylesheet" href="responsive-fixes.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="logo-header">
-        <div class="container1">
-            <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="header-logo">
-        </div>
-    </header>
-<header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="search-container-pure-css">
-                <!-- Hidden Checkbox -->
-                <input type="checkbox" id="searchToggle" class="search-checkbox" hidden>
+<header class="main-header">
+    <div class="header-flex">
+        <!-- 1. Hamburger Menu (Order 1 on Mobile) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" hidden>
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-                <!-- Label acts as the search icon button -->
-                <label for="searchToggle" class="search-toggle-label" aria-label="Toggle Search">
-                    <i class="fas fa-search"></i>
-                </label>
-
-                <!-- The search input field -->
-                <div class="search-input-wrapper-pure-css">
-                    <input type="text" placeholder="Search..." class="search-input">
-                    <button type="submit" class="search-submit-btn" aria-label="Submit Search"><i class="fas fa-arrow-right"></i></button>
-                    <!-- Label acts as the close button -->
-                    <label for="searchToggle" class="search-close-label" aria-label="Close Search"><i class="fas fa-times"></i></label>
-                </div>
-            </div>
+        <!-- 2. Logo (Center on Mobile) -->
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="header-logo">
+            </a>
         </div>
+
+        <!-- 3. Navigation (Vertical on Mobile) -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
@@ -56,30 +49,39 @@
         <div class="container">
             
             <!-- PART 1: THE STORY (Split Layout) -->
-            <div class="story-wrapper">
-                <div class="story-text">
-                    <span class="eyebrow">Our Journey</span>
-                    <h1 class="main-title">About Realize Morocco</h1>
-                    <div class="gold-divider"></div>
-                    
+<section class="about-story-section">
+    <div class="container">
+        <div class="story-wrapper">
+            
+            <!-- TEXT SIDE (Comes first) -->
+            <div class="story-text">
+                <span class="eyebrow">Our Journey</span>
+                <h1 class="main-title">About Realize Morocco</h1>
+                <div class="gold-divider-refined"></div>
+                
+                <div class="story-body">
                     <p class="lead-text">
-                        <span class="drop-cap">W</span>hen we first arrived in Morocco, we were met with a warmth that felt both familiar and new. Neighbors waved, strangers offered help, and smiles bridged the gaps between languages.</p>
-                    <p>The people were kind and patient, yet everything around us felt different, unfamiliar, and full of discovery.</p>
-                    <p>I speak Arabic, but it was clear I had never lived here before. Still, it helped me connect, ask questions, and learn. My husband, however, did not speak Arabic, and through his experience I began to understand the real challenges of adapting, from simple conversations to navigating daily life.</p>
-                    <p>Like many people relocating to a new country, we experienced both the excitement and the uncertainty that come with building a life in a new place. With time, patience, and the kindness of the people around us, we slowly found our rhythm and built friendships and understanding along the way.</p>
-                    <p>Those experiences inspired us to create Realize Morocco.</p>
-                    <p>Realize Morocco is a relocation service dedicated to helping individuals and families move to Morocco with clarity, confidence, and trusted local guidance. From residency procedures and housing to schools and everyday life, we help you navigate the process so you can settle into Morocco smoothly and feel at home.</p>
-                </div>
-
-                <!-- IMAGE PLACEHOLDER (The "Gold Frame" concept) -->
-                <div class="story-image">
-                    <div class="image-frame">
-                        <!-- Replace src with your actual image URL -->
-                        <img src="WhatsApp Image 2026-03-28 at 10.42.18.jpeg" alt="Moroccan Architecture" />
+                        <span class="drop-cap">W</span>hen we first arrived in Morocco, we were met with a warmth that felt both familiar and new. Neighbors waved, strangers offered help, and smiles bridged the gaps between languages.
+                    </p>
+                    <p>The people were kind and patient, yet everything around us felt different, unfamiliar, and full of discovery. I speak Arabic, but it was clear I had never lived here before. My husband, however, did not speak Arabic, and through his experience I began to understand the real challenges of adapting.</p>
+                    <p>Like many people relocating, we experienced both the excitement and the uncertainty of building a life in a new place. With time, we slowly found our rhythm and built friendships that changed our lives.</p>
+                    
+                    <div class="story-insight">
+                        <p>"We created Realize Morocco to be the guide we wish we had."</p>
                     </div>
                 </div>
             </div>
 
+            <!-- IMAGE SIDE (Comes second, larger) -->
+            <div class="story-image">
+                <div class="gallery-border">
+                    <img src="WhatsApp Image 2026-03-28 at 10.42.18.jpeg" alt="Realize Morocco Founders" class="static-img" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
             <!-- PART 2: THE PHILOSOPHY (Blockquote) -->
             <div class="philosophy-block">
                 <div class="quote-icon">“</div>
@@ -91,51 +93,66 @@
             </div>
 
             <!-- PART 3: OUR PROMISE (Grid Layout) -->
-            <div class="promise-section">
-                <div class="section-header">
-                    <h2>Our Promise</h2>
-                    <div class="gold-divider center"></div>
-                    <p class="sub-header">At REALIZE, we pledge to guide you through the transition.</p>
+<section class="promise-section">
+    <div class="container">
+        <!-- Header -->
+        <div class="section-header">
+            <span class="eyebrow">The Realize Pledge</span>
+            <h2 class="main-title">Our Promise To You</h2>
+            <div class="gold-divider center"></div>
+            <p class="sub-header">At REALIZE, we don't just manage logistics; we pledge to guide your soul through the transition.</p>
+        </div>
+
+        <!-- Dynamic Promise Grid -->
+        <div class="promise-grid">
+            <!-- Card 1 -->
+            <div class="promise-card">
+                <div class="card-image-wrapper">
+                    <img src="path-to-your-welcome-image.jpg" alt="Moroccan Hospitality" class="promise-img">
+                    <div class="card-overlay"></div>
                 </div>
-
-                <div class="promise-grid">
-                    <!-- Card 1 -->
-                    <div class="promise-card">
-                        <div class="card-icon">
-                            <!-- Heart Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <h4>Welcome Warmly</h4>
-                        <p>We welcome you the way we were welcomed—with kindness, patience, and an open heart.</p>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="promise-card">
-                        <div class="card-icon">
-                            <!-- Sun/Light Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                        </div>
-                        <h4>Explain Clearly</h4>
-                        <p>We explain the complex cultural nuances clearly, the way we wish someone had done for us.</p>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="promise-card">
-                        <div class="card-icon">
-                            <!-- Feather Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
-                        </div>
-                        <h4>Lighten the Load</h4>
-                        <p>We make the process feel lighter, so you can focus on living your new life, not managing chaos.</p>
-                    </div>
-                </div>
-
-                <!-- CTA BUTTON -->
-                <div class="cta-wrapper">
-                    <p>Whether for work, family, or adventure, let us help you find your rhythm.</p>
-                    <a href="contact.html" class="btn">Start Your Journey</a>
+                <div class="card-content">
+                    <div class="gold-accent-line"></div>
+                    <h4>Welcome Warmly</h4>
+                    <p>We welcome you the way we were welcomed—with kindness, patience, and an open heart that treats every client like family.</p>
                 </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="promise-card">
+                <div class="card-image-wrapper">
+                    <img src="path-to-your-explain-image.jpg" alt="Clear Guidance" class="promise-img">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <div class="gold-accent-line"></div>
+                    <h4>Explain Clearly</h4>
+                    <p>Culture is complex. We bridge the gap by explaining nuances clearly, ensuring you never feel lost in translation.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="promise-card">
+                <div class="card-image-wrapper">
+                    <img src="path-to-your-serene-image.jpg" alt="Peace of Mind" class="promise-img">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <div class="gold-accent-line"></div>
+                    <h4>Lighten the Load</h4>
+                    <p>We handle the chaos of administration and relocation so you can focus on the joy of starting your new Moroccan adventure.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-wrapper">
+            <h3>Find your rhythm in the Red City and beyond.</h3>
+            <p>Whether for work, family, or adventure, let us be your compass.</p>
+            <a href="contact.html" class="btn btn-gold-premium">Start Your Journey</a>
+        </div>
+    </div>
+</section>
 
         </div>
     </section>

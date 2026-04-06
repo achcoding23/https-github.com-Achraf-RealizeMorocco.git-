@@ -126,3 +126,60 @@ document.addEventListener('touchend', function(e) {
         e.target.click();
     }
 }, { passive: false });
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        // Change icon from bars to X
+        const icon = menuToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // 2. Search Functionality
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop page from refreshing
+        const query = searchInput.value.trim();
+        
+        if (query) {
+            alert('Searching for: ' + query);
+            // Replace the alert below with your actual search logic, e.g.:
+            // window.location.href = 'search-results.html?q=' + encodeURIComponent(query);
+        } else {
+            searchInput.focus();
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if(menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    if(searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            const query = searchInput.value.trim();
+            if (query) {
+                alert('Searching for: ' + query);
+            }
+        });
+    }
+});

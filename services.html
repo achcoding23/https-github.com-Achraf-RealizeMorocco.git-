@@ -11,42 +11,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="logo-header">
-        <div class="container1">
-            <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="header-logo">
+<header class="main-header">
+    <div class="header-flex">
+        <!-- 1. Hamburger Menu (Order 1 on Mobile) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" hidden>
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- 2. Logo (Center on Mobile) -->
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <img src="SmartSelect_20251010-121254_Gallery-removebg-preview.png" alt="Realize Morocco Logo" class="header-logo">
+            </a>
         </div>
-    </header>
-<header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
 
-                </ul>
-            </nav>
-            <div class="search-container-pure-css">
-                <!-- Hidden Checkbox -->
-                <input type="checkbox" id="searchToggle" class="search-checkbox" hidden>
-
-                <!-- Label acts as the search icon button -->
-                <label for="searchToggle" class="search-toggle-label" aria-label="Toggle Search">
-                    <i class="fas fa-search"></i>
-                </label>
-
-                <!-- The search input field -->
-                <div class="search-input-wrapper-pure-css">
-                    <input type="text" placeholder="Search..." class="search-input">
-                    <button type="submit" class="search-submit-btn" aria-label="Submit Search"><i class="fas fa-arrow-right"></i></button>
-                    <!-- Label acts as the close button -->
-                    <label for="searchToggle" class="search-close-label" aria-label="Close Search"><i class="fas fa-times"></i></label>
-                </div>
-            </div>
-        </div>
+        <!-- 3. Navigation (Vertical on Mobile) -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-
 <main>
     <section id="services-gallery" class="dark-theme">
         <div class="bg-pattern"></div>
