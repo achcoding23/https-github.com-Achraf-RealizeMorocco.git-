@@ -398,6 +398,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .eyebrow {
@@ -425,6 +426,47 @@
     color: var(--c-white);
     line-height: 1.1;
     margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.method-item {
+    display: flex; /* Enable flexbox for the container */
+    align-items: center; /* Vertically align items in the middle */
+    justify-content: center; /* Horizontally align items in the middle */
+    gap: 15px; /* Add some space between the icon and the text */
+    margin-bottom: 20px; /* Add some space between the two method items */
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column; /* Stack the method items vertically */
+    align-items: center; /* Center the method items themselves */
+    margin-top: 30px; /* Add some space above the contact methods */
+}
+
+/* Optional: Adjust icon size if needed */
+.method-item i {
+    font-size: 24px;
+    color: var(--secondary-color); /* Gold color for icons */
+}
+
+.method-item h4 {
+    margin: 0; /* Remove default margin from heading */
+    color: var(--secondary-color);
+}
+
+.method-item p {
+    margin: 0; /* Remove default margin from paragraph */
+    color: #ffffff;
+}
+
+.contact-info-panel .main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    color: var(--c-white);
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    text-align: center;
 }
 
 /* Dividers */
@@ -445,12 +487,12 @@
 
 /* Paragraphs & Alignment */
 .about-content {
-    text-align: left;
+    text-align: center;
     padding-left: 20px;
 }
 
 .text-content-style {
-    text-align: left;
+    text-align: center;
 }
 
 .about-content p {
@@ -531,8 +573,12 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0 0 5px 0;
+    text-align: left;
 }
 
+.text-content-style .eyebrow-text {
+    margin-top: 40px;
+}
 /* =========================================
    4. IMAGE & FRAME STYLES
    ========================================= */
@@ -894,6 +940,7 @@
 @media (max-width: 480px) {
     .main-title {
         font-size: 2rem !important;
+        text-align: center;
     }
     .drop-cap {
         font-size: 3.5rem !important;

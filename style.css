@@ -140,6 +140,7 @@ section h2 {
     border-radius: 8px;
     transition: all 0.3s ease-in-out, transform 0.1s ease-out;
     margin-top: 15px;
+    margin-bottom: 25px;
     font-weight: bold;
     letter-spacing: 0.5px;
     border: none;
@@ -149,6 +150,17 @@ section h2 {
     overflow: hidden;
     z-index: 1;
 }
+
+.about-content .btn {
+    text-align: center;
+    align-items: center;
+}
+
+.text-content-style .btn {
+    text-align: center;
+    align-items: center;
+}
+
 
 .btn:hover {
     background: var(--hover-gold);
@@ -246,6 +258,11 @@ section h2 {
 .btn-consultation:hover {
     background-color: #bd9b6a;
     color: #05152e;
+}
+
+.btn .btn-gold {
+    margin-bottom: 1px;
+    padding-bottom: 1px;
 }
 
 /* =========================================
@@ -455,6 +472,11 @@ section h2 {
     max-width: 900px;
 }
 
+.contact-info-panel .contact-methods {
+    align-content: center;
+}
+
+
 .hero-eyebrow {
     display: block;
     color: var(--secondary-color);
@@ -500,10 +522,11 @@ section h2 {
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
     animation: fadeUp 1s ease-out 1s forwards;
     opacity: 0;
 }
+
 
 .scroll-indicator {
     position: absolute;
@@ -874,6 +897,12 @@ section h2 {
     filter: brightness(1.1);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0%;
+}
+.footer-text {
+    margin-top: 0%;
+    padding-top: 0%;
+    border-top: 0%;
 }
 
 .footer-heading {
@@ -995,7 +1024,7 @@ section h2 {
     /* Hero Adjustments */
     .hero-title { font-size: 2.5rem; }
     .hero-subtitle { font-size: 1rem; }
-    .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
+    .hero-buttons { flex-direction: row; width: 100%; max-width: 300px; margin: 10px auto;}
 
     /* About Adjustments */
     .about-section .col-md-6 {
