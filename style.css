@@ -51,13 +51,48 @@
 /* =========================================
    3. BASE STYLES & LAYOUT
    ========================================= */
+/* 1. Set the global body background */
+body, main {
+    background-color: #2a3a4a !important;
+    background: #2a3a4a !important; /* Removes any gradients */
+}
+
+/* Remove colors from all sections so the body color shows through */
+#contact-section {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Ensure the contact form box stays dark so it stands out */
+.form-container-premium {
+    background-color: #162336 !important; /* Keep the form box dark blue */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
 body {
+    background-color: #2a3a4a;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* 2. Update the Contact Section to blend in with the new body color */
+#contact-section {
+    padding: 100px 0;
+    background-color: #2a3a4a; /* Matches the new body color */
+}
+
+/* 3. If you are using the 'main' wrapper, update the gradient to match */
 main {
-    background: linear-gradient(145deg, var(--light-bg) 0%, var(--primary-color) 100%);
+    background: #2a3a4a; /* Removed the previous dark gradient */
+}
+
+/* 4. Ensure the Form Container still pops against the new background */
+.form-container-premium {
+    background: #162336; /* Dark Blue from your logo for the form box itself */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(189, 155, 106, 0.2);
 }
 
 .container {
