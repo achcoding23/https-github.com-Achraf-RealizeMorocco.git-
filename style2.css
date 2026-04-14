@@ -899,3 +899,6 @@
         font-size: 3.5rem !important;
     }
 }
+.cta-wrapper p {
+    text-align: center;
+}
